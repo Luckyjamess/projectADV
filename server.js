@@ -12,6 +12,7 @@ app.use((req, res, next) => {     let ALLOW_ORIGIN = ['domain-a.com', 'domain-b.
         res.header('Access-Control-Allow-Methods','POST, GET, PUT, PATCH, DELETE, OPTIONS')        
         res.header('Access-Control-Allow-Headers','Content-Type, Option, Authorization')        
         return next()     })
+        
 env.config()
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.qgh9i.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`,
     {
