@@ -19,10 +19,10 @@ mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONG
         useUnifiedTopology: true,
     }
 ).then(() => {
-    console.log('connet db');
+    console.log('connet db');clae
 })
 app.use(express.json())
 app.use('/api',projectADV)
-app.listen(process.env.PORT,() =>{
+app.listen(process.env.PORT,() =>{ 
     console.log('server running ...', process.env.PORT);
 })
