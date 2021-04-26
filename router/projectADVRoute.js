@@ -1,9 +1,10 @@
 const { Router } = require('express')
 const express = require('express')
-const { createtable,query } = require('../controller/projectADVController')
+const { createtable,query, addLike, getLike, test } = require('../controller/projectADVController')
 const router = express.Router()
 router.post('/registed',createtable)
 router.get('/query',query)
-
-
+router.post('/likeimg',addLike)
+router.post('/getlikeimg',getLike)
+router.get('/test',test)
 module.exports = router
